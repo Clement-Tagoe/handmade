@@ -112,8 +112,12 @@ img {
     left: 0;
 }
 
+.showcase-text {
+    /* border: 2px solid black; */
+}
+
 .showcase-text h1 {
-    font-size: 140px;
+    font-size: 130px;
     font-family: 'DM Serif Display', serif;
     line-height: 1;
 }
