@@ -110,6 +110,7 @@ img {
     position: absolute;
     top: 130px;
     left: 0;
+    bottom: 0;
 }
 
 .showcase-text {
@@ -129,8 +130,9 @@ img {
 
 .showcase-image {
     width: 500px;
-    height: 500px;
+    height: 515px;
     justify-self: flex-end;
+    overflow: visible;
 }
 
 .showcase-image img {
