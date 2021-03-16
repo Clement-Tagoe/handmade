@@ -68,6 +68,7 @@ img {
     font-size: 17px;
     font-weight: 600;
     z-index: 10;
+   
 }
 
 .nav-colored { 
@@ -173,12 +174,14 @@ img {
     height: 650px;
     position: relative;
     background-color: rgb(251, 205, 190);
+    
 }
 
 .showcase-content {
     position: absolute;
     left: 0;
     bottom: 0;
+ 
 }
 
 /* .showcase-content .grid {
@@ -186,6 +189,7 @@ img {
 } */
 
 /* .showcase-text {
+    border: 2px solid white;
 } */
 
 
@@ -204,6 +208,7 @@ img {
     width: 545px;
     height: 515px;
     justify-self: flex-end;
+   
 }
 
 .showcase-image img {
@@ -245,8 +250,8 @@ img {
     bottom: 0;
 }
 
-.about-section-content.grid-3 {
-    grid-template-columns: 35% 45% 20%;
+.about-section-content.grid-2 {
+    grid-template-columns: 35% 45%;
 }
 
 .hand-image {
@@ -318,10 +323,11 @@ img {
         position: absolute;
         top: 80px;
         right: 0;
-        width: 350px;
+        width: 100%;
         height: 350px;
         background-color:rgba(251, 205, 190, 0.9);
         z-index: 5;
+        border: 2px solid blue;
         transform: translateX(100%);
     }
 
@@ -341,34 +347,56 @@ img {
         transition: 0.4s;
     }
 
-    .showcase {
-        height: 550px;
-    }
-
     .showcase-content {
-        height: 400px;
+        height: auto;
     }
 
     .showcase-content .grid {
         grid-template-columns: 1fr;
+        gap: 50px;
     }
 
     .showcase-image {
-        width: 300px;
+        width: 350px;
         height: 100%;
-        justify-self: center;
+        justify-self: flex-end;
     }
 
     .showcase-text {
-        width: 85%;
+        width: 80%;
         margin: 0 auto;
     }
 
     .showcase-text h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .showcase-text p {
         font-size: 16px;
+    }
+
+    .about-section-content.grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .hand-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    .logo-about {
+        z-index: 2;
+    }
+
+    .logo-about img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logo-about h1 {
+        font-size: 30px;
     }
 }
