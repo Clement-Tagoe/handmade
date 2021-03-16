@@ -60,17 +60,22 @@ img {
 
 
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
     font-size: 17px;
     font-weight: 600;
+    z-index: 10;
 }
 
-.navbar .container {
-    max-width: 95%;
+.nav-colored { 
+    background-color:rgba(251, 205, 190, 0.8); 
+}
+
+.nav-transparent { 
+    background-color: transparent;
 }
 
 .navbar .flex {
@@ -78,8 +83,8 @@ img {
 }
 
 .logo-div img {
-    width: 220px;
-    height: 120px;
+    width: 75px;
+    height: 75px;
 }
 
 .navbar ul {
@@ -98,17 +103,80 @@ img {
 }
 
 
+.navbar .toggler {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar .hamburger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: rgb(251, 205, 190);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.navbar .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2.5px;
+    background-color: #aa6d4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.navbar .hamburger > div:before,
+.navbar .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2.5px;
+    background: inherit;
+}
+
+.navbar .hamburger > div:after {
+    top: 10px;
+}
+
+.navbar .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+/* Turn lines into X */
+.navbar .toggler:checked + .hamburger > div:before,
+.navbar .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
 /* Showcase */
 
 .showcase {
     height: 650px;
     position: relative;
-    background-color: #fbcdbe;
+    background-color: rgb(251, 205, 190);
 }
 
 .showcase-content {
     position: absolute;
-    top: 130px;
     left: 0;
     bottom: 0;
 }
@@ -133,10 +201,9 @@ img {
 }
 
 .showcase-image {
-    width: 510px;
+    width: 545px;
     height: 515px;
     justify-self: flex-end;
-    overflow: visible;
 }
 
 .showcase-image img {
@@ -224,4 +291,84 @@ img {
 
 .btn:hover {
     transform: scale(0.97);
+}
+
+
+@media(max-width: 768px) {
+
+    .container {
+        max-width: 95%;
+    }
+
+
+    .logo-div img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .navbar .toggler {
+        visibility: visible;
+    }
+
+    .navbar .hamburger {
+        visibility: visible;
+    }
+
+    .navbar nav {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 350px;
+        height: 350px;
+        background-color:rgba(251, 205, 190, 0.9);
+        z-index: 5;
+        transform: translateX(100%);
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+    }
+
+    .navbar .toggler:checked ~ nav {
+        transform: translateX(0);
+        transition: 0.4s;
+    }
+
+    .showcase {
+        height: 550px;
+    }
+
+    .showcase-content {
+        height: 400px;
+    }
+
+    .showcase-content .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-image {
+        width: 300px;
+        height: 100%;
+        justify-self: center;
+    }
+
+    .showcase-text {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .showcase-text h1 {
+        font-size: 45px;
+    }
+
+    .showcase-text p {
+        font-size: 16px;
+    }
 }
