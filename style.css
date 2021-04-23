@@ -173,7 +173,7 @@ img {
 /* Showcase */
 
 .showcase {
-    height: 650px;
+    height: 90vh;
     position: relative;
     background-color: rgb(251, 205, 190);
 }
@@ -182,15 +182,17 @@ img {
     position: absolute;
     left: 0;
     bottom: 0;
+    /* border: 2px solid red; */
+    height: 90%;
 }
 
 /* .showcase-content .grid {
     border: 2px solid red;
 } 
-
-.showcase-text {
+*/
+/* .showcase-text {
     border: 2px solid green;
-} */
+}  */
 
 
 .showcase-text h1 {
@@ -205,9 +207,9 @@ img {
 }
 
 .showcase-image {
-    width: 545px;
-    height: 590px;
-    justify-self: flex-end;
+    width: 60%;
+    height: 100%;
+    justify-self: center;
     /* border: 2px solid black; */
 }
 
@@ -219,6 +221,7 @@ img {
 .social {
     position: absolute;
     bottom: 20px;
+    right: 10px;
 }
 
 .social .container {
@@ -357,7 +360,6 @@ img {
     }
 
     .showcase-image {
-        width: 350px;
         height: 75%;
         justify-self: center;
         align-self: flex-start;
