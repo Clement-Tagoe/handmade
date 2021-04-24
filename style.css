@@ -320,7 +320,7 @@ img {
 }
 
 
-@media(max-width: 768px) {
+@media (max-width: 768px) and (orientation: landscape) {
 
     .container {
         max-width: 95%;
