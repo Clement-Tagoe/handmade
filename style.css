@@ -173,9 +173,10 @@ img {
 /* Showcase */
 
 .showcase {
-    height: 90vh;
+    height: 95vh;
     position: relative;
     background-color: rgb(251, 205, 190);
+    overflow: visible;
 }
 
 .showcase-content {
@@ -186,10 +187,6 @@ img {
     height: 90%;
 }
 
-/* .showcase-content .grid {
-    border: 2px solid red;
-} 
-*/
 /* .showcase-text {
     border: 2px solid green;
 }  */
@@ -211,6 +208,7 @@ img {
     height: 100%;
     justify-self: center;
     align-self: flex-end;
+    /* border: 2px solid black; */
 }
 
 .showcase-image img {
