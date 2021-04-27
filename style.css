@@ -173,7 +173,7 @@ img {
 /* Showcase */
 
 .showcase {
-    height: 670px;
+    height: 700px;
     position: relative;
     background-color: rgb(251, 205, 190);
 }
@@ -237,7 +237,7 @@ img {
 .about-section {
     position: relative;
     background-color: rgb(238, 238, 238);
-    height: 670px;
+    height: 700px;
 }
 
 .about-section-content {
@@ -314,7 +314,7 @@ img {
 /* Skin section */
 .skin-section {
     /* position: relative; */
-    height: 670px;
+    height: 700px;
     background: url("images/skin-bg.jpg");
     background-color: rgb(238, 238, 238);
     background-repeat: no-repeat;
@@ -351,7 +351,7 @@ img {
     text-transform: uppercase;
     text-align: center;
     color: #4b281a;
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: 2px;
     transition: 0.3s;
 }
