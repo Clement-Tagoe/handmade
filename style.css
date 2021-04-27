@@ -173,25 +173,32 @@ img {
 /* Showcase */
 
 .showcase {
-    height: 650px;
+    height: 670px;
     position: relative;
     background-color: rgb(251, 205, 190);
-    overflow: visible;
 }
 
 .showcase-content {
     position: absolute;
     left: 0;
     bottom: 0;
-    /* border: 2px solid red; */
     height: 90%;
 }
 
-.showcase-text {
-    /* border: 2px solid green; */
-    margin-bottom: 200px;
-} 
+.showcase-image {
+    justify-self: center;
+    align-self: flex-end;
+}
 
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.showcase-text {
+    padding-bottom: 200px;   
+    animation: slideInFromLeft 1s ease-in; 
+} 
 
 .showcase-text h1 {
     font-size: 130px;
@@ -202,18 +209,7 @@ img {
 .showcase-text p {
     font-size: 20px;
     font-weight: 600;
-}
-
-.showcase-image {
-    object-fit: cover;
-    justify-self: center;
-    align-self: flex-end;
-    /* border: 2px solid black; */
-}
-
-.showcase-image img {
-    width: 100%;
-    height: 100%;
+    animation: slideInFromRight 1s ease-in; 
 }
 
 .social {
@@ -241,7 +237,7 @@ img {
 .about-section {
     position: relative;
     background-color: rgb(238, 238, 238);
-    height: 600px;
+    height: 670px;
 }
 
 .about-section-content {
@@ -314,11 +310,100 @@ img {
     transform: scale(0.97);
 }
 
-.products img {
-    width: 100%;
-    height: 100%;
+
+/* Skin section */
+.skin-section {
+    /* position: relative; */
+    height: 670px;
+    background: url("images/skin-bg.jpg");
+    background-color: rgb(238, 238, 238);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
+/* .skin-content {
+    position: absolute;
+    height: 100%;
+    top: 0;
+} */
+
+.skin-content .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* .skin-content .flex-3 {
+    display: flex;
+} */
+
+.skin-content h1 {
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 70px;
+    color: #4b281a;
+    padding: 20px 0;
+}
+
+.skin-content h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #4b281a;
+    font-size: 35px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.skin-content h2:hover {
+    letter-spacing: 6px;
+}
+
+
+.skin img:hover {   
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1024px) {
+   
+    .showcase-content {
+        height: 85%;
+    }
+   
+    .showcase-text {
+        padding-bottom: 50px;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -374,18 +459,18 @@ img {
 
     .showcase-content .grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 20px;
     }
 
     .showcase-image {
-        height: 100%;
         justify-self: center;
         align-self: flex-end;
         order: 2;
     }
 
     .showcase-text {
-        width: 80%;
+        width: 90%;
+        padding-bottom: 0;
         margin: 0 auto;
         order: 1;
     }
@@ -402,7 +487,6 @@ img {
         grid-template-columns: 1fr;
     }
 
-
     .logo-about img {
         width: 200px;
         height: 200px;
@@ -418,5 +502,44 @@ img {
 
     .btn {
         margin-bottom: 10px;
+    }
+
+    .skin-content .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    /* .skin-content .flex-3 {
+        flex-direction: column;
+    } */
+
+    .skin-section {
+        height: auto;
+    }
+
+    .skin-content h1 {
+        font-size: 35px;
+    }
+
+    .skin-content h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .showcase-content {
+        top: 130px;
+    }
+
+    .showcase-content .grid {
+        gap: 40px;
+    }
+
+    .social .container {
+        flex-direction: column;
+    }
+    
+    .social a {
+        padding: 5px 0;
     }
 }
