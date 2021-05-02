@@ -452,8 +452,8 @@ img {
 
 
 .testimonials .container {
-    border: 2px solid red;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .testimonials h1 {
@@ -473,20 +473,9 @@ img {
     border-radius: 5px;
     counter-increment: carousel-cell;
   }
-  
-  /* cell number */
-  .carousel-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(carousel-cell);
-    line-height: 400px;
-    font-size: 80px;
-    color: white;
-  }
 
   .site-footer {
     background-color:rgb(251, 205, 190);
-    margin-top: 50px;
     padding: 45px 0 0;
     font-size: 15px;
     line-height: 24px;
