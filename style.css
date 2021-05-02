@@ -408,7 +408,6 @@ img {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
 }
 
@@ -448,8 +447,13 @@ img {
 .info-text h1 {
     font-size: 35px;
     text-align: left;
+    line-height: 1.2;
 }
 
+.info-text hr {
+    visibility: hidden; 
+    padding-bottom: 10px;
+}
 
 .testimonials .container {
     margin-top: 50px;
