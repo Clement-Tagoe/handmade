@@ -103,7 +103,7 @@ img {
 
 .navbar .toggler {
     position: absolute;
-    top: 15px;
+    top: 7px;
     right: 15px;
     z-index: 2;
     cursor: pointer;
@@ -116,7 +116,7 @@ img {
 
 .navbar .hamburger {
     position: absolute;
-    top: 15px;
+    top: 7px;
     right: 15px;
     z-index: 1;
     width: 60px;
@@ -540,6 +540,7 @@ img {
     height: 450px;
     position: relative;
     background-color: rgb(251, 205, 190);
+    margin-top: 70px;
 }
 
 .about-showcase .navbar {
@@ -623,6 +624,85 @@ img {
   }
 
 
+  /* Products Page */
+  .products-showcase {
+    height: 450px;
+    position: relative;
+    background-color: rgb(251, 205, 190);
+    margin-top: 70px;
+}
+
+.products-showcase .navbar {
+    background-color: rgb(251, 205, 190);
+}
+
+
+.products-showcase .social a {
+    z-index: 5;
+    color:rgb(251, 205, 190);
+}
+
+.products-showcase-content {
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.products {
+    margin-top: 50px;
+}
+
+.products .container {
+    max-width: 95%;
+}
+
+.products h1 {
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.products h5 {
+    font-size: 20px;
+}
+
+.product-range {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    height: 100%;
+    justify-content: center;
+}
+
+.product-item {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+}
+.product-item .item {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 0;
+}
+
+.product-item .item img {
+    width: 100%;
+    height: 100%;
+}
+
+.item-info {
+    margin-top: 0;
+    border: 1px solid rgb(251, 205, 190);
+}
+
+
   /* Media Queries */
 
 @media (max-width: 1024px) {
@@ -646,6 +726,10 @@ img {
     .logo-div img {
         width: 65px;
         height: 65px;
+    }
+
+    .navbar {
+        height: 75px;
     }
 
     .navbar .toggler {
@@ -751,8 +835,9 @@ img {
         font-size: 25px;
     }
 
-    .about-showcase {
-        height: 300px;
+    .about-showcase,
+    .products-showcase {
+        height: 270px;
     }
 
     .about-showcase-content {
@@ -762,6 +847,11 @@ img {
     .about-info .content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .info-text h1,
+    .products h1 {
+        font-size: 30px;
     }
 
     .info-text-1 {
@@ -784,21 +874,26 @@ img {
         height: 250px;
     }
 
+    .products-showcase-content {
+        font-size: 30px;
+    }
+
     .site-footer {
         height: auto;
         padding-bottom: 0;
       }
-      .site-footer .copyright-text,.site-footer .social-icons {
+
+    .site-footer .copyright-text,.site-footer .social-icons {
         text-align:center
       }
 
-      .social-icons li.title {
+    .social-icons li.title {
         display: block;
         margin-right: 0;
         font-weight: 600;
       }
 
-      .footer-row {
+    .footer-row {
         grid-template-columns: 1fr;
     }
 
