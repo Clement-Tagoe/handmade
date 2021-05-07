@@ -51,28 +51,28 @@
     <div class="container">
       <div class="contacts">
         <div class="contacts-form">
-            <form>
+            <form method="POST" id="contactForm">
                 <div class="contacts-row">
                     <div class="input50">
-                        <input type="text" placeholder="First Name" />
+                        <input type="text" placeholder="First Name" id="firstName" required/>
                     </div>
                     <div class="input50">
-                        <input type="text" placeholder="Last Name" />
+                        <input type="text" placeholder="Last Name" id="lastName" required/>
                     </div>
                 </div>
 
                 <div class="contacts-row">
                     <div class="input50">
-                        <input type="text" placeholder="Email" />
+                        <input type="text" placeholder="Email" id="email" required/>
                     </div>
                     <div class="input50">
-                        <input type="text" placeholder="Subject" />
+                        <input type="text" placeholder="Phone Number" id="phone" required/>
                     </div>
                 </div>
 
                 <div class="contacts-row">
                     <div class="input100">
-                        <textarea placeholder="Message"></textarea>
+                        <textarea placeholder="Message" id="message" required></textarea>
                     </div>
                 </div>
 
@@ -170,6 +170,9 @@
 
     
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase.js"></script>
+    <script src="form.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
